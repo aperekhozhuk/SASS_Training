@@ -17,16 +17,16 @@ module.exports = {
             exclude: '/node_modules/'
         }, {
             test: /\.css$/,
-            use: [{
-                loader: MiniCssExtractPlugin.loader,
-                options: {
-                // you can specify a publicPath here
-                // by default it uses publicPath in webpackOptions.output
-                    publicPath: '../',
-                    hmr: process.env.NODE_ENV === 'development',
-                },
-            },
-            'css-loader',
+            use: [
+                'style-loader',
+                MiniCssExtractPlugin.loader,
+                {
+                    loader: 'css-loader',
+                    options: { sourceMap: true }
+                }, {
+                    loader: 'postcss-loader',
+                    options: { sourceMap: true, config: { path: 'src/js/postcss.config.js' } }
+                }
             ],
         }, {
             test: /\.scss$/,
@@ -37,17 +37,18 @@ module.exports = {
                     loader: 'css-loader',
                     options: { sourceMap: true }
                 }, {
+                    loader: 'postcss-loader',
+                    options: { sourceMap: true, config: { path: 'src/js/postcss.config.js' } }
+                }, {
                     loader: 'sass-loader',
                     options: { sourceMap: true }
                 }
             ]
-
-
         }]
     },
     plugins: [
         new MiniCssExtractPlugin({
-        filename: '[name].css',
+            filename: '[name].css',
         }),
     ],
     devServer: {
