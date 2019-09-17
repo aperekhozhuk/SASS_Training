@@ -1,2 +1,2 @@
-.wrapper{background:#00f}
-body{color:#fff5ee;background:#2f4f4f}
+.wrapper{background:#00f;display:-webkit-box;display:-ms-flexbox;display:flex}a,li,p{color:red}
+body{color:#fff5ee;background:#2f4f4f}div,ul{display:inline}
