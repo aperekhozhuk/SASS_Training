@@ -4,12 +4,44 @@
     <meta charset="UTF-8">
     <title>Hackademy - Figma</title>
     <link rel="stylesheet" href="./dist/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="./dist/app.js"></script>
 </head>
 <body>
     <header>
-        <img src="src/img/logo_text.png" alt="Hackademy">
-        <div class="login-button">LOGIN</button>
+        <img src="src/img/logo_text.png" alt="Hackademy"> 
+        <div id="login-button" class="login-button">LOGIN</div>
     </header>
+    <main>
+        <div id="loginModal" class="loginModal">
+            <div class="loginModal-content">
+                <span class="loginModal-content-close" id="loginModal-content-close">&times;</span> 
+                <img class="modal-logo" src="src/img/logo.svg"> 
+                
+                <form id="login-form" class="login-form" action="/" onsubmit="event.preventDefault()">
+                    <div class="form-input email">
+                        <div class="icon"><i class="fa fa-user"></i></div>
+                        <input class="field" type="email">
+                    </div>
+                    <div class="form-input password">
+                        <div class="icon"><i class="fa fa-lock"></i></div>
+                        <input class="field" type="password">
+                    </div>
+                    <div class="form-input form-submit">
+                        <input id="login-form-submit" type="submit">
+                    </div>
+                </form>
+
+            
+
+
+            </div>
+        </div>
+
+
+
+
+
+    </main>
 </body>
 </html>

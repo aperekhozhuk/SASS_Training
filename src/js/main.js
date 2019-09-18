@@ -1,10 +1,22 @@
 window.onload=function(){
-    var logBtn = document.getElementsByClassName("login-button")[0];
-    logBtn.addEventListener("click", loginButtonClick);
+    var loginModal = document.getElementById("loginModal");
+    var loginBtn = document.getElementById("login-button");
+    var closeModal = document.getElementById("loginModal-content-close");
+    //var loginFormSubmitBtn = document.getElementById("login-form-submit");
+    loginBtn.onclick = function() {
+        loginModal.style.display = "block";
+    }
+    closeModal.onclick = function() {
+        loginModal.style.display = "none";
+    }
+    window.onclick = function(event) {
+        if (event.target == loginModal) {
+            loginModal.style.display = "none";
+        }
+    }
+
 }
 
-function loginButtonClick() {
-    alert('kek');
-}
+
 
 
