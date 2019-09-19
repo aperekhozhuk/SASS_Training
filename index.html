@@ -21,14 +21,33 @@
                 <form id="login-form" class="login-form" action="/" onsubmit="event.preventDefault()">
                     <div class="form-input email">
                         <div class="icon"><i class="fa fa-user"></i></div>
-                        <input class="field" type="email">
+                        <input id="email-field" class="field" type="email">
                     </div>
                     <div class="form-input password">
                         <div class="icon"><i class="fa fa-lock"></i></div>
-                        <input class="field" type="password">
+                        <input id="password-field" class="field" type="password">
                     </div>
-                    <div class="form-input form-submit">
-                        <input id="login-form-submit" type="submit" value="LOGIN">
+                    <div class="form-forgot-password">
+                        Forgot password?
+                    </div>
+
+                    <div id="login-form-submit" class="form-input form-submit">
+                        <input type="submit" value="LOGIN">
+                    </div>
+                    <div class="account-exist-asker">
+                        <div class="sign-up"><span>Do not have an account?</span>
+                            <span class="sign-span">SIGN UP</span>
+                        </div>
+                    </div>
+                    <div class="sign-alternative">
+                        <div class="line-container"><div class="line"></div></div>
+                        <div class="or">OR</div>
+                        <div class="line-container"><div class="line"></div></div>
+                    </div>
+                    <div class="sign-services">
+                        <img src="src/img/google-logo.png" alt="Google">
+                        <img src="src/img/fb-logo.png" alt="Facebook">
+                        <img src="src/img/git-logo.png" alt="Github">
                     </div>
                 </form>
 
