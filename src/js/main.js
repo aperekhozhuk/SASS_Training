@@ -7,7 +7,8 @@ window.onload=function(){
     var passField = document.getElementById("password-field");
     var emailField = document.getElementById("email-field");
     var submitBtn = document.getElementById("login-form-submit");
-    var errorModal = document.getElementById("error-window");
+    var errorWindow = document.getElementById("error-window");
+    var errorContent = document.getElementById("error-content");
     loginBtn.onclick = function() {
         loginModal.style.display = "block";
     }
@@ -21,15 +22,23 @@ window.onload=function(){
         if (email == "" || pass == "") {
             return;
         }
-        if ((!validateEmail(email)) || (!validatePassword(pass))) {
+        var flag1 = !validateEmail(email);
+        var flag2 = !validatePassword(pass);
+        if (( flag1 || flag2)) {
             submitBtn.style.opacity = "0.5"
             if (is_error_showed == 0) {
-                errorModal.style.display = "block";
+                errorWindow.style.display = "block";
                 is_error_showed = 1;
+            }
+            errorContent.innerHTML = "";
+            if (flag1) {
+                errorContent.innerHTML += "Bad email adress; "
+            }
+            if (flag2) {
+                errorContent.innerHTML += "Your password should be at least 8 symbols, contain 1 uppercase, 1 downcase letter, 1 spec symbol, 1 number"
             }
             return;
         }
-        //alert(111111);
         submitBtn.style.opacity = "1.0";
     }
 

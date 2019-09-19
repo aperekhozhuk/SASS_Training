@@ -51,7 +51,7 @@ header {
     background-color: $dark_bg;
     margin: auto;
     margin-top: 10vw;//$modal_margin_top;
-    padding: 20px;
+    padding: 18px 20px;
     border-radius: $modal_border_radius;
     width: $modal_width;
     height: $modal_height;
@@ -59,8 +59,7 @@ header {
 
 .error-content {
     margin-top: 2vw;
-    width: 15vw;
-    height: 6vw;
+    width: 70vw;
     font-size: 2vw;
     opacity: 0.3;
     padding: 2vw;
@@ -84,9 +83,16 @@ header {
 
 // modal window content settings
 .modal-logo {
-    margin: auto;
+    margin: 0px auto 15px auto;
     display: block;
-    margin-bottom: 50px;
+}
+.login-header {
+    color: $main_theme;
+    width: 105px;
+    margin: auto;
+    height: 44px;
+    line-height: 44px;
+    margin-bottom:54px;
 }
 .login-form { 
     .form-input {
