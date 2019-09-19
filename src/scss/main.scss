@@ -37,7 +37,7 @@ header {
 }
 
 // modal window settings
-.loginModal, .error-window {
+.loginModal {
     display: none; 
     position: fixed; 
     z-index: 1; 
@@ -47,7 +47,7 @@ header {
     overflow: auto;
 }
 
-.loginModal-content, .error-content {
+.loginModal-content {
     background-color: $dark_bg;
     margin: auto;
     margin-top: 10vw;//$modal_margin_top;
@@ -55,16 +55,6 @@ header {
     border-radius: $modal_border_radius;
     width: $modal_width;
     height: $modal_height;
-}
-
-.error-content {
-    margin-top: 2vw;
-    width: 70vw;
-    font-size: 2vw;
-    opacity: 0.3;
-    padding: 2vw;
-    background: yellow;
-    text-align: center;    
 }
 
 .loginModal-content-close {
@@ -160,6 +150,11 @@ header {
         text-decoration: underline;
         text-decoration-color: blue;
     }    
+}
+.error-container {
+    color: white;
+    text-align: center;
+    margin-top: 10px;
 }
 .account-exist-asker {
     width: 85%;

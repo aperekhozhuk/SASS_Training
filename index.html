@@ -13,17 +13,13 @@
         <div id="login-button" class="login-button">LOGIN</div>
     </header>
     <main>
-        <div id="error-window" class="error-window">
-            <div id="error-content" class="error-content"></div>
-        </div>
-
         <div id="loginModal" class="loginModal">
             <div class="loginModal-content">
                 <div class="loginModal-content-close" id="loginModal-content-close">&times;</div> 
                 <img class="modal-logo" src="src/img/logo.svg"> 
                 
                 <h2 class="login-header">LOGIN</h2> 
-                <form id="login-form" class="login-form" action="/" onsubmit="event.preventDefault()">
+                <form id="login-form" class="login-form">
                     <div id="email-input" class="form-input email">
                         <div class="icon"><i class="fa fa-user"></i></div>
                         <input id="email-field" class="field email-field" placeholder="Email" type="text">
@@ -35,37 +31,29 @@
                     <div class="form-forgot-password">
                         Forgot password?
                     </div>
-
+                    <div id="error-container" class="error-container"></div>
                     <div id="login-form-submit" class="form-input form-submit">
                         <input type="submit" value="LOGIN">
                     </div>
-                    <div class="account-exist-asker">
-                        <div class="sign-up"><span>Do not have an account?</span>
-                            <span class="sign-span">SIGN UP</span>
-                        </div>
-                    </div>
-                    <div class="sign-alternative">
-                        <div class="line-container"><div class="line"></div></div>
-                        <div class="or">OR</div>
-                        <div class="line-container"><div class="line"></div></div>
-                    </div>
-                    <div class="sign-services">
-                        <img src="src/img/google-logo.png" alt="Google">
-                        <img src="src/img/fb-logo.png" alt="Facebook">
-                        <img src="src/img/git-logo.png" alt="Github">
-                    </div>
                 </form>
-
-            
-
-
+                <div class="account-exist-asker">
+                    <div class="sign-up">
+                        <span>Do not have an account?</span>
+                        <span class="sign-span">SIGN UP</span>
+                    </div>
+                </div>
+                <div class="sign-alternative">
+                    <div class="line-container"><div class="line"></div></div>
+                    <div class="or">OR</div>
+                    <div class="line-container"><div class="line"></div></div>
+                </div>
+                <div class="sign-services">
+                    <img src="src/img/google-logo.png" alt="Google">
+                    <img src="src/img/fb-logo.png" alt="Facebook">
+                    <img src="src/img/git-logo.png" alt="Github">
+                </div>
             </div>
         </div>
-
-
-
-
-
     </main>
 </body>
 </html>
