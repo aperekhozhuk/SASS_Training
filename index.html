@@ -13,19 +13,25 @@
         <div id="login-button" class="login-button">LOGIN</div>
     </header>
     <main>
+        <div id="error-window" class="error-window">
+            <div class="error-content">
+                Bad input
+            </div>
+        </div>
+
         <div id="loginModal" class="loginModal">
             <div class="loginModal-content">
                 <div class="loginModal-content-close" id="loginModal-content-close">&times;</div> 
                 <img class="modal-logo" src="src/img/logo.svg"> 
                 
                 <form id="login-form" class="login-form" action="/" onsubmit="event.preventDefault()">
-                    <div class="form-input email">
+                    <div id="email-input" class="form-input email">
                         <div class="icon"><i class="fa fa-user"></i></div>
-                        <input id="email-field" class="field" type="email">
+                        <input id="email-field" class="field email-field" placeholder="Email" type="text">
                     </div>
-                    <div class="form-input password">
+                    <div id="password-input" class="form-input password">
                         <div class="icon"><i class="fa fa-lock"></i></div>
-                        <input id="password-field" class="field" type="password">
+                        <input id="password-field" placeholder="Password" class="field password-field" type="password">
                     </div>
                     <div class="form-forgot-password">
                         Forgot password?

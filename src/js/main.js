@@ -1,3 +1,5 @@
+var is_error_showed = 0;
+
 window.onload=function(){
     var loginModal = document.getElementById("loginModal");
     var loginBtn = document.getElementById("login-button");
@@ -5,6 +7,7 @@ window.onload=function(){
     var passField = document.getElementById("password-field");
     var emailField = document.getElementById("email-field");
     var submitBtn = document.getElementById("login-form-submit");
+    var errorModal = document.getElementById("error-window");
     loginBtn.onclick = function() {
         loginModal.style.display = "block";
     }
@@ -15,19 +18,29 @@ window.onload=function(){
     passField.onmouseleave= function() {
         var email = emailField.value;
         var pass = passField.value;
+        if (email == "" || pass == "") {
+            return;
+        }
         if ((!validateEmail(email)) || (!validatePassword(pass))) {
             submitBtn.style.opacity = "0.5"
+            if (is_error_showed == 0) {
+                errorModal.style.display = "block";
+                is_error_showed = 1;
+            }
             return;
         }
         //alert(111111);
         submitBtn.style.opacity = "1.0";
-
-
     }
+
+    emailField.oninput = resetErrorFlag;
+    passField.oninput = resetErrorFlag;
+
     window.onclick = function(event) {
         if (event.target == loginModal) {
             loginModal.style.display = "none";
         }
+        errorModal.style.display = "none";
     }
 }
 
@@ -41,4 +54,6 @@ function validatePassword(pass) {
     return re.test(pass);
 }
 
-
+function resetErrorFlag() {
+    is_error_showed = 0;
+}
