@@ -129,7 +129,6 @@
         text-decoration: underline;
         text-decoration-color: blue;
     }
-
     .logModal-form-error {
         color: white;
         text-align: center;
@@ -186,18 +185,16 @@
 }
 
 // media queries
-@media (max-width: 500px) {
+@media only screen and (max-width: 500px) {
     .header {
         flex-direction: column;
         height: auto;
         justify-content: center;
-    }
-    .header {
         .header-img, .header-button {
             margin: auto;
             width: 80%;
             height: auto;
-        }
+        }   
     }
     .logModal {
         padding: 0;
@@ -210,7 +207,7 @@
         margin: auto;
         float: none;
     }
-    .logModal-accountAsk .sign-span {
+    .logModal-accountAsk, span {
         display: block;
     }
 }   

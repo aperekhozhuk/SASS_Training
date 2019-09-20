@@ -4,7 +4,6 @@ window.onload = function() {
     var closeModal = document.getElementById("logModal-close");
     var passField = document.getElementById("logModal-form-password-input");
     var emailField = document.getElementById("logModal-form-email-input");
-    var submitBtn = document.getElementById("login-form-submit");
     var errorContainer = document.getElementById("logModal-form-error");
     var submitInput = document.getElementById("logModal-form-submit-input");
 
@@ -25,14 +24,16 @@ window.onload = function() {
     function leftField() {
         var email = emailField.value;
         var pass = passField.value;
+        console.log(email,pass);
         if (email == "" || pass == "") {
             return;
         }
+
         var flag1 = !validateEmail(email);
         var flag2 = !validatePassword(pass);
         var message = ""
         if (( flag1 || flag2)) {
-            submitBtn.style.opacity = "0.5"
+            submitInput.style.opacity = "0.5"
             submitInput.disabled = true;
             if (flag1) {
                 message += "Bad email adress; "
@@ -43,7 +44,7 @@ window.onload = function() {
             errorContainer.innerHTML = message;
             return;
         }
-        submitBtn.style.opacity = "1.0";
+        submitInput.style.opacity = "1.0";
         submitInput.disabled = false;
         errorContainer.innerHTML = "";
     }
