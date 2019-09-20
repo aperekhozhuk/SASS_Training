@@ -100,7 +100,6 @@ header {
         background-color: $dark_bg;
         border: 0;
         outline: none;
-        background: transparent;
     }
     .field {
         margin-left: 2%;
@@ -132,6 +131,9 @@ header {
         input {
             background-color: $main_theme;
             opacity: 0.5;
+        }
+        .submit-btn:enabled:hover {
+            opacity: 0.8;
         }
     }
     .fa {

@@ -6,6 +6,7 @@ window.onload = function() {
     var emailField = document.getElementById("email-field");
     var submitBtn = document.getElementById("login-form-submit");
     var errorContainer = document.getElementById("error-container");
+    var submitInput = document.getElementById("submit-btn");
     loginBtn.onclick = function() {
         loginModal.style.display = "block";
     }
@@ -28,6 +29,7 @@ window.onload = function() {
         var message = ""
         if (( flag1 || flag2)) {
             submitBtn.style.opacity = "0.5"
+            submitInput.disabled = true;
             if (flag1) {
                 message += "Bad email adress; "
             }
@@ -36,11 +38,11 @@ window.onload = function() {
             }
             errorContainer.innerHTML = message;
             return;
+        }
+        submitBtn.style.opacity = "1.0";
+        submitInput.disabled = false;
+        errorContainer.innerHTML = "";
     }
-    submitBtn.style.opacity = "1.0";
-    errorContainer.innerHTML = "";
-}
-
 }
 
 
@@ -59,8 +61,6 @@ function hide_modal(event) {
         loginModal.style.display = "none";
     }
 }
-
-
 
 
 
