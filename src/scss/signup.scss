@@ -16,4 +16,37 @@
     .signModal-header {
         @include Modal-header(26px, 35px, 335px);
     }
+
+    .signModal-form { 
+        .signModal-form-item {
+            @include Modal-form-item();
+        }
+        input {
+            @include Modal-form-item-input();
+        }
+        .field {
+            @include Modal-form-field();
+        }
+        .icon {
+            @include Modal-form-item-icon();
+        }
+        .signModal-form-password {
+            margin-top: 20px;
+        }
+        .field-container:focus-within {
+            @include changeBorderColor();
+        }
+        .signModal-form-submit {
+            @include Modal-form-submit();
+            input {
+                @include Modal-form-submit-button();
+            }
+            .signModal-form-submit-input:enabled:hover {
+                @include changeBgColor();
+            }
+        }
+        .fa {
+            @include changeColor();
+        }    
+    }
 }

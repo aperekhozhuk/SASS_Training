@@ -30,10 +30,12 @@ window.onload = function() {
         if (event.target == loginModal) {
             loginModal.style.display = "none";
         }
+    }
+    signModal.onclick = function(event) {
         if (event.target == signModal) {
             signModal.style.display = "none";
         }
-    };
+    }
     passField.onmouseleave = leftField;
     emailField.onmouseleave = leftField;
 
