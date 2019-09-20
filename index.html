@@ -5,7 +5,6 @@
     <title>Hackademy - Figma</title>
     <link rel="stylesheet" href="./dist/app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet"" href="./dist/" title="" type="">
     <script src="./dist/app.js"></script>
 </head>
 <body>
@@ -15,11 +14,29 @@
     </header>
     <main>
 
-        <div id="signModal-container" class="signModal-Container">
+        <div id="signModal-container" class="signModal-container">
             <div id="signModal" class="signModal">
                 <div id="signModal-close" class="signModal-close">&times;</div> 
                 <img class="signModal-logo" src="src/img/logo.svg"> 
-                <h2 class="signModal-header">CREATE YOUR ACCOUNT</h2>            
+                <h2 class="signModal-header">CREATE YOUR ACCOUNT</h2>  
+                <form id="logModal-form" class="logModal-form">
+                    <div id="logModal-form-email" class="logModal-form-email logModal-form-item field-container">
+                        <div class="email-icon icon"><i class="fa fa-user"></i></div>
+                        <input id="logModal-form-email-input" class="logModal-form-email-input field" placeholder="Email" type="text">
+                    </div>
+                    <div id="logModal-form-password" class="logModal-form-password logModal-form-item field-container">
+                        <div class="password-icon icon"><i class="fa fa-lock"></i></div>
+                        <input id="logModal-form-password-input" class="logModal-form-password-input field" type="password" placeholder="Password">
+                    </div>
+                    <div id="logModal-form-confirmPassword" class="logModal-form-password logModal-form-item field-container">
+                        <div class="password-icon icon"><i class="fa fa-lock"></i></div>
+                        <input id="logModal-form-password-input" class="logModal-form-password-input field" type="password" placeholder="Confirm password">
+                    </div>
+                    <div id="logModal-form-error" class="logModal-form-error"></div>
+                    <div id="logModal-form-submit" class="logModal-form-submit logModal-form-item">
+                        <input id="logModal-form-submit-input" class="logModal-form-submit-input" type="submit" value="CREATE ACCOUNT" disabled>
+                    </div>
+                </form>
             </div>
         </div>
 

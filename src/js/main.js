@@ -6,7 +6,7 @@ window.onload = function() {
     var emailField = document.getElementById("logModal-form-email-input");
     var errorContainer = document.getElementById("logModal-form-error");
     var submitInput = document.getElementById("logModal-form-submit-input");
-/*
+
     var signUp = document.getElementById("signUp")
     var signModal = document.getElementById("signModal-container");
     var signModalClose = document.getElementById("signModal-close");
@@ -18,9 +18,9 @@ window.onload = function() {
     signModalClose.onclick = function() {
         signModal.style.display = "none";
     }
-*/
+
     loginBtn.onclick = function() {
-        //signModal.style.display = "none";
+        signModal.style.display = "none";
         loginModal.style.display = "block";
     }
     closeModal.onclick = function() {
@@ -30,6 +30,9 @@ window.onload = function() {
         if (event.target == loginModal) {
             loginModal.style.display = "none";
         }
+        if (event.target == signModal) {
+            signModal.style.display = "none";
+        }
     };
     passField.onmouseleave = leftField;
     emailField.onmouseleave = leftField;
@@ -37,7 +40,7 @@ window.onload = function() {
     function leftField() {
         var email = emailField.value;
         var pass = passField.value;
-        console.log(email,pass);
+        //console.log(email,pass);
         if (email == "" || pass == "") {
             return;
         }

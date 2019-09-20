@@ -2,7 +2,7 @@
     @include modalContainer(); 
 }
 .signModal {
-    @include Modal-content(none);
+    @include Modal-content();
     .signModal-close {
         @include Modal-close();
     }
@@ -14,6 +14,6 @@
         @include Modal-logo();
     }
     .signModal-header {
-        @include Modal-header();
+        @include Modal-header(26px, 35px, 335px);
     }
 }

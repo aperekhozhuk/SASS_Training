@@ -2,7 +2,7 @@
     @include modalContainer(); 
 }
 .logModal {
-    @include Modal-content(block);
+    @include Modal-content();
     .logModal-close {
         @include Modal-close();
     }
@@ -14,7 +14,7 @@
         @include Modal-logo();
     }
     .logModal-header {
-        @include Modal-header();
+        @include Modal-header(32px, 44px, 105px);
     }
     .logModal-form { 
         .logModal-form-item {
