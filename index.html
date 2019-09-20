@@ -5,6 +5,7 @@
     <title>Hackademy - Figma</title>
     <link rel="stylesheet" href="./dist/app.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet"" href="./dist/" title="" type="">
     <script src="./dist/app.js"></script>
 </head>
 <body>
@@ -13,7 +14,20 @@
         <div id="header-button" class="header-button">LOGIN</div>
     </header>
     <main>
-        <div id="logModal-container" class="modalContainer"> 
+
+        <div id="signModal-container" class="signModal-Container">
+            <div id="signModal" class="signModal">
+                <div id="signModal-close" class="signModal-close">&times;</div> 
+                <img class="signModal-logo" src="src/img/logo.svg"> 
+                <h2 class="signModal-header">CREATE YOUR ACCOUNT</h2>            
+            </div>
+        </div>
+
+        
+
+
+
+        <div id="logModal-container" class="logModal-container"> 
             <div id="logModal" class="logModal">
                 <div id="logModal-close" class="logModal-close">&times;</div> 
                 <img class="logModal-logo" src="src/img/logo.svg"> 
@@ -35,7 +49,7 @@
                 </form>
                 <div class="logModal-accountAsk">
                     <span>Do not have an account?</span>
-                    <span class="sign-span">SIGN UP</span>
+                    <span id="signUp" class="sign-span">SIGN UP</span>
                 </div>
                 <div class="or-container">
                     <div class="or-lineDiv"><div class="or-line"></div></div>

@@ -1,0 +1,19 @@
+.signModal-container {
+    @include modalContainer(); 
+}
+.signModal {
+    @include Modal-content(none);
+    .signModal-close {
+        @include Modal-close();
+    }
+    .signModal-close:hover,
+    .signModal-close:focus {
+        @include Modal-close-hover();
+    }
+    .signModal-logo {
+        @include Modal-logo();
+    }
+    .signModal-header {
+        @include Modal-header();
+    }
+}

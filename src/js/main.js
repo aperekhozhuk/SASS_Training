@@ -6,8 +6,21 @@ window.onload = function() {
     var emailField = document.getElementById("logModal-form-email-input");
     var errorContainer = document.getElementById("logModal-form-error");
     var submitInput = document.getElementById("logModal-form-submit-input");
+/*
+    var signUp = document.getElementById("signUp")
+    var signModal = document.getElementById("signModal-container");
+    var signModalClose = document.getElementById("signModal-close");
 
+    signUp.onclick = function() {
+        loginModal.style.display = "none";
+        signModal.style.display = "block";
+    }
+    signModalClose.onclick = function() {
+        signModal.style.display = "none";
+    }
+*/
     loginBtn.onclick = function() {
+        //signModal.style.display = "none";
         loginModal.style.display = "block";
     }
     closeModal.onclick = function() {
