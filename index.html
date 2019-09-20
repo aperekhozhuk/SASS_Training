@@ -8,46 +8,41 @@
     <script src="./dist/app.js"></script>
 </head>
 <body>
-    <header>
-        <img src="src/img/logo_text.png" alt="Hackademy"> 
-        <div id="login-button" class="login-button">LOGIN</div>
+    <header class="header">
+        <img class="header-img"src="src/img/logo_text.png" alt="Hackademy"> 
+        <div id="header-button" class="header-button">LOGIN</div>
     </header>
     <main>
-        <div id="loginModal" class="loginModal">
-            <div class="loginModal-content">
-                <div class="loginModal-content-close" id="loginModal-content-close">&times;</div> 
-                <img class="modal-logo" src="src/img/logo.svg"> 
-                
-                <h2 class="login-header">LOGIN</h2> 
-                <form id="login-form" class="login-form">
-                    <div id="email-input" class="form-input email">
-                        <div class="icon"><i class="fa fa-user"></i></div>
-                        <input id="email-field" class="field email-field" placeholder="Email" type="text">
+        <div id="logModal-container" class="modalContainer"> 
+            <div id="logModal" class="logModal">
+                <div id="logModal-close" class="logModal-close">&times;</div> 
+                <img class="logModal-logo" src="src/img/logo.svg"> 
+                <h2 class="logModal-header">LOGIN</h2> 
+                <form id="logModal-form" class="logModal-form">
+                    <div id="logModal-form-email" class="logModal-form-email logModal-form-item field-container">
+                        <div class="email-icon icon"><i class="fa fa-user"></i></div>
+                        <input id="logModal-form-email-input" class="logModal-form-email-input field" placeholder="Email" type="text">
                     </div>
-                    <div id="password-input" class="form-input password">
-                        <div class="icon"><i class="fa fa-lock"></i></div>
-                        <input id="password-field" placeholder="Password" class="field password-field" type="password">
+                    <div id="logModal-form-password" class="logModal-form-password logModal-form-item field-container">
+                        <div class="password-icon icon"><i class="fa fa-lock"></i></div>
+                        <input id="logModal-form-password-input" class="logModal-form-password-input field" type="password" placeholder="Password">
                     </div>
-                    <div class="form-forgot-password">
-                        Forgot password?
-                    </div>
-                    <div id="error-container" class="error-container"></div>
-                    <div id="login-form-submit" class="form-input form-submit">
-                        <input id="submit-btn" class="submit-btn" type="submit" value="LOGIN" disabled>
+                    <div class="logModal-form-forgot">Forgot password?</div>
+                    <div id="logModal-form-error" class="logModal-form-error"></div>
+                    <div id="logModal-form-submit" class="logModal-form-submit logModal-form-item">
+                        <input id="logModal-form-submit-input" class="logModal-form-submit-input" type="submit" value="LOGIN" disabled>
                     </div>
                 </form>
-                <div class="account-exist-asker">
-                    <div class="sign-up">
-                        <span>Do not have an account?</span>
-                        <span class="sign-span">SIGN UP</span>
-                    </div>
+                <div class="logModal-accountAsk">
+                    <span>Do not have an account?</span>
+                    <span class="sign-span">SIGN UP</span>
                 </div>
-                <div class="sign-alternative">
-                    <div class="line-container"><div class="line"></div></div>
-                    <div class="or">OR</div>
-                    <div class="line-container"><div class="line"></div></div>
+                <div class="or-container">
+                    <div class="or-lineDiv"><div class="or-line"></div></div>
+                    <div class="or-label">OR</div>
+                    <div class="or-lineDiv"><div class="or-line"></div></div>
                 </div>
-                <div class="sign-services">
+                <div class="logModal-socialButtons">
                     <img src="src/img/google-logo.png" alt="Google">
                     <img src="src/img/fb-logo.png" alt="Facebook">
                     <img src="src/img/git-logo.png" alt="Github">
