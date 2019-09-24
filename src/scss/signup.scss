@@ -48,6 +48,9 @@
         .fa {
             @include changeColor();
         }
+        .signModal-form-error {
+            @include Modal-form-error();
+        }
     }
     .signModal-info {
         width: 284px;
