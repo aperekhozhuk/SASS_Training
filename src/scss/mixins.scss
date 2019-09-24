@@ -38,6 +38,7 @@
     line-height: $height;
     margin-bottom:54px;
     font-size: $font-size;
+    text-align: center;
 }
 @mixin Modal-form-item() {  // container for all input elements
     display:flex;

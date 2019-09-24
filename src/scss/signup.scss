@@ -47,6 +47,29 @@
         }
         .fa {
             @include changeColor();
-        }    
+        }
+    }
+    .signModal-info {
+        width: 284px;
+        height: 30px;
+        color: white;
+        text-align: center;
+        font-size: 13px;
+        margin: 21px auto;
+        a {
+            color: $main_theme;
+            text-decoration: none;
+        }
+    }
+}
+@media (max-width: 390px) {
+    .signModal-header {
+        max-width: 70%;
+    }
+    .signModal-form {
+        margin-top: 70px;
+    }
+    .signModal-info {
+        max-width: 70%;
     }
 }
