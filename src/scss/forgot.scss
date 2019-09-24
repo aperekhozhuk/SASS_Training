@@ -49,12 +49,20 @@
             @include Modal-form-error();
         }
     }
+    .backToLogin {
+        @include Modal-accountAsk();
+        span {
+            color: $main_theme;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+    }
 }
 
 @media (max-width:400px) {
     .forgotModal {
         .forgotModal-header {
-        font-size: 22px;
+            font-size: 22px;
         }    
     }
 }

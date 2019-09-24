@@ -3,6 +3,7 @@ window.onload = function() {
     var loginBtn = document.getElementById("header-button");
     var closeModal = document.getElementById("logModal-close");
     var signUpToLogin = document.getElementById("signUpToLogin");
+    var forgotToLogin = document.getElementById("forgotToLogin");
 
     var passField = document.getElementById("logModal-form-password-input");
     var emailField = document.getElementById("logModal-form-email-input");
@@ -22,6 +23,9 @@ window.onload = function() {
     var forgotBtn = document.getElementById("forgotBtn");
     var forgotModal = document.getElementById("forgotModal-container");
     var forgotClose = document.getElementById("forgotModal-close");
+    var forgotEmailInput = document.getElementById("forgotModal-form-email-input");
+    var forgotErrorContainer = document.getElementById("forgotModal-form-error");
+    var forgotSubmitBtn = document.getElementById("forgotModal-form-submit-input");
 
     signUp.onclick = function() {
         loginModal.style.display = "none";
@@ -30,7 +34,6 @@ window.onload = function() {
     signModalClose.onclick = function() {
         signModal.style.display = "none";
     }
-
     loginBtn.onclick = function() {
         signModal.style.display = "none";
         forgotModal.style.display = "none";
@@ -50,9 +53,7 @@ window.onload = function() {
         }
     }
     signUpToLogin.onclick = loginBtn.onclick;
-    forgotBtn.onclick = function() {
-        logi
-    }
+
     forgotBtn.onclick = function() {
         loginModal.style.display = "none";
         forgotModal.style.display = "block"
@@ -65,12 +66,17 @@ window.onload = function() {
             forgotModal.style.display = "none";
         }
     }
+    forgotToLogin.onclick = function() {
+        forgotModal.style.display = "none";
+        loginModal.style.display = "block";
+    }
 
     passField.onmouseleave = leftField;
     emailField.onmouseleave = leftField;
     signPassField.onmouseleave = leftField;
     signEmailField.onmouseleave = leftField;
     signConfirmPassField.onmouseleave = leftField;
+    forgotEmailInput.onmouseleave = leftField;
 
     function leftField(event) {
         var modalType = event.target.id.split('-')[0];
@@ -79,7 +85,12 @@ window.onload = function() {
         var pass;
         var submitBtn;
         var errorContainer;
-        if (modalType == 'signModal') {
+        if (modalType == 'forgotModal') {
+            email = forgotEmailInput.value;
+            errorContainer = forgotErrorContainer;
+            submitBtn = forgotSubmitBtn;
+            pass = "zAglushka1@";
+        } else if (modalType == 'signModal') {
             confirmPassword = signConfirmPassField.value;
             if (confirmPassword == "") {
                 return;
