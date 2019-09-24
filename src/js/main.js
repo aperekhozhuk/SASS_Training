@@ -19,6 +19,10 @@ window.onload = function() {
     var signModal = document.getElementById("signModal-container");
     var signModalClose = document.getElementById("signModal-close");
 
+    var forgotBtn = document.getElementById("forgotBtn");
+    var forgotModal = document.getElementById("forgotModal-container");
+    var forgotClose = document.getElementById("forgotModal-close");
+
     signUp.onclick = function() {
         loginModal.style.display = "none";
         signModal.style.display = "block";
@@ -29,6 +33,7 @@ window.onload = function() {
 
     loginBtn.onclick = function() {
         signModal.style.display = "none";
+        forgotModal.style.display = "none";
         loginModal.style.display = "block";
     }
     closeModal.onclick = function() {
@@ -45,7 +50,21 @@ window.onload = function() {
         }
     }
     signUpToLogin.onclick = loginBtn.onclick;
-
+    forgotBtn.onclick = function() {
+        logi
+    }
+    forgotBtn.onclick = function() {
+        loginModal.style.display = "none";
+        forgotModal.style.display = "block"
+    }
+    forgotClose.onclick = function() {
+        forgotModal.style.display = "none";
+    }
+    forgotModal.onclick = function(event) {
+        if (event.target == forgotModal) {
+            forgotModal.style.display = "none";
+        }
+    }
 
     passField.onmouseleave = leftField;
     emailField.onmouseleave = leftField;

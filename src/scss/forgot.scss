@@ -1,0 +1,60 @@
+.forgotModal-container {
+    @include modalContainer(); 
+}
+.forgotModal {
+    @include Modal-content();
+    height: 448px;
+    .forgotModal-close {
+        @include Modal-close();
+    }
+    .forgotModal-close:hover,
+    .forgotModal-close:focus {
+        @include Modal-close-hover();
+    }
+    .forgotModal-logo {
+        @include Modal-logo();
+    }
+    .forgotModal-header {
+        @include Modal-header(26px, 35px, 300px); 
+    }
+    .forgotModal-form { 
+        .forgotModal-form-item {
+            @include Modal-form-item();
+        }
+        input {
+            @include Modal-form-item-input();
+        }
+        .field {
+            @include Modal-form-field();
+        }
+        .icon {
+            @include Modal-form-item-icon();
+        }
+        .field-container:focus-within {
+            @include changeBorderColor();
+        }
+        .forgotModal-form-submit {
+            @include Modal-form-submit(28px);
+            input {
+                @include Modal-form-submit-button();
+            }
+            .forgotModal-form-submit-input:enabled:hover {
+                @include changeBgColor();
+            }
+        }
+        .fa {
+            @include changeColor();
+        }
+        .forgotModal-form-error {
+            @include Modal-form-error();
+        }
+    }
+}
+
+@media (max-width:400px) {
+    .forgotModal {
+        .forgotModal-header {
+        font-size: 22px;
+        }    
+    }
+}

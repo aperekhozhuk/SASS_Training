@@ -2,6 +2,7 @@
 @import 'mixins';
 @import 'login';
 @import 'signup';
+@import 'forgot';
 
 // header settings
 .header {
@@ -44,11 +45,11 @@
             height: auto;
         }   
     }
-    .logModal, .signModal {
+    .logModal, .signModal, .forgotModal {
         padding: 0;
         width: 100%;
     }
-    .logModal-close, .signModal-close {
+    .logModal-close, .signModal-close, .forgotModal-close {
         display:block;
         width: 100%;
         text-align: center;
