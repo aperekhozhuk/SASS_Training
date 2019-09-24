@@ -1,0 +1,58 @@
+@import 'variables';
+
+
+
+.reset {
+    @include Modal-content();
+    height: 489px;
+    .reset-close {
+        @include Modal-close();
+    }
+    .reset-close:hover {
+        @include Modal-close-hover();
+    }
+    .reset-logo {
+        @include Modal-logo();
+    }
+    .reset-header {
+        @include Modal-header(26px, 35px, 250px);
+    }
+
+    .reset-form { 
+        .reset-form-item {
+            @include Modal-form-item();
+        }
+        input {
+            @include Modal-form-item-input();
+        }
+        .field {
+            @include Modal-form-field();
+        }
+        .icon {
+            @include Modal-form-item-icon();
+        }
+        .reset-form-password {
+            margin-top: 20px;
+        }
+        .field-container:focus-within {
+            @include changeBorderColor();
+        }
+        .reset-form-submit {
+            @include Modal-form-submit(20px);
+            input {
+                @include Modal-form-submit-button();
+            }
+            .logModal-form-submit-input:enabled:hover {
+                @include changeBgColor();
+            }
+        }
+        .fa {
+            @include changeColor();
+        }
+        .reset-form-error {
+            @include Modal-form-error();
+        }
+    }
+
+}
+
