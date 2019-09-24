@@ -36,7 +36,7 @@
             @include changeBorderColor();
         }
         .logModal-form-submit {
-            @include Modal-form-submit();
+            @include Modal-form-submit(20px);
             input {
                 @include Modal-form-submit-button();
             }

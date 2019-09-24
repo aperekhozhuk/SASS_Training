@@ -2,6 +2,7 @@ window.onload = function() {
     var loginModal = document.getElementById("logModal-container");
     var loginBtn = document.getElementById("header-button");
     var closeModal = document.getElementById("logModal-close");
+    var signUpToLogin = document.getElementById("signUpToLogin");
 
     var passField = document.getElementById("logModal-form-password-input");
     var emailField = document.getElementById("logModal-form-email-input");
@@ -43,6 +44,9 @@ window.onload = function() {
             signModal.style.display = "none";
         }
     }
+    signUpToLogin.onclick = loginBtn.onclick;
+
+
     passField.onmouseleave = leftField;
     emailField.onmouseleave = leftField;
     signPassField.onmouseleave = leftField;

@@ -37,7 +37,7 @@
             @include changeBorderColor();
         }
         .signModal-form-submit {
-            @include Modal-form-submit();
+            @include Modal-form-submit(20px);
             input {
                 @include Modal-form-submit-button();
             }
@@ -64,7 +64,17 @@
             text-decoration: none;
         }
     }
+    .signModal-accountAsk {
+        @include Modal-accountAsk();
+        margin-top: 30px;
+        span {
+            color: $main_theme;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+    }
 }
+
 @media (max-width: 390px) {
     .signModal-header {
         max-width: 70%;

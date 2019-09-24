@@ -73,8 +73,8 @@
 @mixin changeBorderColor() {
     border-color: $main_theme; 
 }
-@mixin Modal-form-submit() {
-    margin-top: 50px;
+@mixin Modal-form-submit($margin-top) {
+    margin-top: $margin-top;
     padding: 0;
 }
 @mixin Modal-form-submit-button() {
