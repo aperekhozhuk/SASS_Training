@@ -106,6 +106,9 @@ window.onload = function() {
             submitBtn = submitInput;
         }
         if (email == "" || pass == "") {
+            submitBtn.style.opacity = "0.5";
+            submitBtn.disabled = true;
+            errorContainer.innerHTML = "";
             return;
         }
         var flag1 = !validateEmail(email);
