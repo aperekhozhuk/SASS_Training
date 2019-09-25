@@ -51,8 +51,16 @@
         }
         .reset-form-error {
             @include Modal-form-error();
+            font-size: 15px;
         }
     }
 
 }
-
+@media (max-width: 500px) {
+    .reset {
+        width: 100%;
+        .reset-header {
+            font-size: 23px;
+        }
+    }
+}
