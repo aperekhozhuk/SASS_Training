@@ -1,7 +1,12 @@
-FROM node:latest
+FROM myfront/base_img:latest
 
-COPY ./node_modules .
-COPY ./package-lock.json . 
-COPY ./package.json .
-COPY ./webpack.config.js . 
+COPY ./index.html .
+COPY ./reset.html .
+COPY ./src/ .
+
+CMD npm run build
+CMD npm run dev
+
+EXPOSE 8080
+
 
