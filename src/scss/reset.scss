@@ -1,5 +1,22 @@
+@import 'root';
 @import 'variables';
+@import 'mixins';
 
+
+.header {
+    background-color: $dark_bg;
+    width: 100%;
+    height: $header_height;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    .header-img {
+        width: 310px;
+        height: $header_height * 0.75;
+        margin-top: $header_height / 8;
+        float: left;
+    }
+}
 
 
 .reset {
@@ -62,5 +79,34 @@
         .reset-header {
             font-size: 23px;
         }
+    }
+}
+
+
+@media (max-width: 500px) {
+    .header {
+        height: auto;
+        justify-content: center;
+        .header-img, .header-button {
+            margin: auto;
+            width: 80%;
+            height: auto;
+        }   
+    }
+    .reset {
+        padding: 0;
+        width: 100%;
+        .reset-form {
+            .reset-form-error {
+                font-size: 13px;   
+            }   
+        }
+        .reset-close {
+            display:block;
+            width: 100%;
+            text-align: center;
+            margin: auto;
+            float: none;
+        }    
     }
 }
