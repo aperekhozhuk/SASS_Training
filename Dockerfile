@@ -1,4 +1,4 @@
-FROM myfront/base_img:latest
+FROM maestro1997/myfront_base_img 
 
 COPY ./index.html .
 COPY ./reset.html .
