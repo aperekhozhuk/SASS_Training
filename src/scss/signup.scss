@@ -1,0 +1,88 @@
+.signModal-container {
+    @include modalContainer(); 
+}
+.signModal {
+    @include Modal-content();
+    .signModal-close {
+        @include Modal-close();
+    }
+    .signModal-close:hover,
+    .signModal-close:focus {
+        @include Modal-close-hover();
+    }
+    .signModal-logo {
+        @include Modal-logo();
+    }
+    .signModal-header {
+        @include Modal-header(26px, 35px, 335px);
+    }
+
+    .signModal-form { 
+        .signModal-form-item {
+            @include Modal-form-item();
+        }
+        input {
+            @include Modal-form-item-input();
+        }
+        .field {
+            @include Modal-form-field();
+        }
+        .icon {
+            @include Modal-form-item-icon();
+        }
+        .signModal-form-password {
+            margin-top: 20px;
+        }
+        .field-container:focus-within {
+            @include changeBorderColor();
+        }
+        .signModal-form-submit {
+            @include Modal-form-submit(20px);
+            input {
+                @include Modal-form-submit-button();
+            }
+            .signModal-form-submit-input:enabled:hover {
+                @include changeBgColor();
+            }
+        }
+        .fa {
+            @include changeColor();
+        }
+        .signModal-form-error {
+            @include Modal-form-error();
+        }
+    }
+    .signModal-info {
+        width: 284px;
+        height: 30px;
+        color: white;
+        text-align: center;
+        font-size: 13px;
+        margin: 21px auto;
+        a {
+            color: $main_theme;
+            text-decoration: none;
+        }
+    }
+    .signModal-accountAsk {
+        @include Modal-accountAsk();
+        margin-top: 30px;
+        span {
+            color: $main_theme;
+            margin-left: 5px;
+            cursor: pointer;
+        }
+    }
+}
+
+@media (max-width: 390px) {
+    .signModal-header {
+        max-width: 70%;
+    }
+    .signModal-form {
+        margin-top: 70px;
+    }
+    .signModal-info {
+        max-width: 70%;
+    }
+}

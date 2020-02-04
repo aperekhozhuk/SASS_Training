@@ -13,7 +13,40 @@
         <div id="header-button" class="header-button">LOGIN</div>
     </header>
     <main>
-        <div id="logModal-container" class="modalContainer"> 
+<!----------         Modal window for Sign In         ------>
+        <div id="signModal-container" class="signModal-container">
+            <div id="signModal" class="signModal">
+                <div id="signModal-close" class="signModal-close">&times;</div> 
+                <img class="signModal-logo" src="src/img/logo.svg"> 
+                <h2 class="signModal-header">CREATE YOUR ACCOUNT</h2>  
+                <form id="signModal-form" class="signModal-form">
+                    <div id="signModal-form-email" class="signModal-form-email signModal-form-item field-container">
+                        <div class="email-icon icon"><i class="fa fa-user"></i></div>
+                        <input id="signModal-form-email-input" class="logModal-form-email-input field" placeholder="Email" type="text">
+                    </div>
+                    <div id="signModal-form-password" class="signModal-form-password signModal-form-item field-container">
+                        <div class="password-icon icon"><i class="fa fa-lock"></i></div>
+                        <input id="signModal-form-password-input" class="signModal-form-password-input field" type="password" placeholder="Password">
+                    </div>
+                    <div id="signModal-form-confirmPassword" class="signModal-form-password signModal-form-item field-container">
+                        <div class="password-icon icon"><i class="fa fa-lock"></i></div>
+                        <input id="signModal-form-confirmPassword-input" class="signModal-form-password-input field" type="password" placeholder="Confirm password">
+                    </div>
+                    <div id="signModal-form-error" class="signModal-form-error"></div>
+                    <div id="signModal-form-submit" class="signModal-form-submit signModal-form-item">
+                        <input id="signModal-form-submit-input" class="signModal-form-submit-input" type="submit" value="CREATE ACCOUNT" disabled>
+                    </div>
+                </form>
+                <div class="signModal-info">
+                    By creating an account, I accept Hackacademy <a href="/">Terms of Use</a> and <a href="/">Privacy Policy.</a>
+                </div>
+                <div class="signModal-accountAsk">
+                    Already have an account?<span id="signUpToLogin">LOGIN</span> 
+                </div>
+            </div>
+        </div>
+<!----------         Modal window for Login         ------>
+        <div id="logModal-container" class="logModal-container"> 
             <div id="logModal" class="logModal">
                 <div id="logModal-close" class="logModal-close">&times;</div> 
                 <img class="logModal-logo" src="src/img/logo.svg"> 
@@ -27,7 +60,7 @@
                         <div class="password-icon icon"><i class="fa fa-lock"></i></div>
                         <input id="logModal-form-password-input" class="logModal-form-password-input field" type="password" placeholder="Password">
                     </div>
-                    <div class="logModal-form-forgot">Forgot password?</div>
+                    <div id="forgotBtn" class="logModal-form-forgot">Forgot password?</div>
                     <div id="logModal-form-error" class="logModal-form-error"></div>
                     <div id="logModal-form-submit" class="logModal-form-submit logModal-form-item">
                         <input id="logModal-form-submit-input" class="logModal-form-submit-input" type="submit" value="LOGIN" disabled>
@@ -35,7 +68,7 @@
                 </form>
                 <div class="logModal-accountAsk">
                     <span>Do not have an account?</span>
-                    <span class="sign-span">SIGN UP</span>
+                    <span id="signUp" class="sign-span">SIGN UP</span>
                 </div>
                 <div class="or-container">
                     <div class="or-lineDiv"><div class="or-line"></div></div>
@@ -47,6 +80,28 @@
                     <img src="src/img/fb-logo.png" alt="Facebook">
                     <img src="src/img/git-logo.png" alt="Github">
                 </div>
+            </div>
+        </div>
+<!----------         Modal window for Forgot Passwrord         ------>
+        <div id="forgotModal-container" class="forgotModal-container">
+            <div id="forgotModal" class="forgotModal">
+                <div id="forgotModal-close" class="forgotModal-close">&times;</div> 
+                <img class="forgotModal-logo" src="src/img/logo.svg">
+                <h2 class="forgotModal-header">FORGOT PASSWORD</h2> 
+
+                <form action="reset.html" id="forgotModal-form" class="forgotModal-form">
+                    <div id="forgotModal-form-email" class="forgotModal-form-email forgotModal-form-item field-container">
+                        <div class="email-icon icon"><i class="fa fa-user"></i></div>
+                        <input id="forgotModal-form-email-input" class="forgotModal-form-email-input field" placeholder="Email" type="text">
+                    </div>
+                    <div id="forgotModal-form-error" class="forgotModal-form-error"></div>
+                    <div id="forgotModal-form-submit" class="forgotModal-form-submit forgotModal-form-item">
+                        <input id="forgotModal-form-submit-input" class="forgotModal-form-submit-input" type="submit" value="Reset Password" disabled>
+                    </div>
+                </form>
+                <div class="backToLogin">
+                    Back to <span id="forgotToLogin">LOGIN</span>
+                </div>           
             </div>
         </div>
     </main>

@@ -1,0 +1,103 @@
+.logModal-container {
+    @include modalContainer(); 
+}
+.logModal {
+    @include Modal-content();
+    .logModal-close {
+        @include Modal-close();
+    }
+    .logModal-close:hover,
+    .logModal-close:focus {
+        @include Modal-close-hover();
+    }
+    .logModal-logo {
+        @include Modal-logo();
+    }
+    .logModal-header {
+        @include Modal-header(32px, 44px, 105px);
+    }
+    .logModal-form { 
+        .logModal-form-item {
+            @include Modal-form-item();
+        }
+        input {
+            @include Modal-form-item-input();
+        }
+        .field {
+            @include Modal-form-field();
+        }
+        .icon {
+            @include Modal-form-item-icon();
+        }
+        .logModal-form-password {
+            margin-top: 20px;
+        }
+        .field-container:focus-within {
+            @include changeBorderColor();
+        }
+        .logModal-form-submit {
+            @include Modal-form-submit(20px);
+            input {
+                @include Modal-form-submit-button();
+            }
+            .logModal-form-submit-input:enabled:hover {
+                @include changeBgColor();
+            }
+        }
+        .fa {
+            @include changeColor();
+        }
+        .logModal-form-forgot {
+            @include Modal-form-forgot();
+        }
+        .logModal-form-forgot:hover { 
+            @include Modal-form-forgot-hover();
+        }
+        .logModal-form-error {
+            @include Modal-form-error();
+        }
+    }
+}
+.logModal-accountAsk{
+    @include Modal-accountAsk();
+    span {
+        text-align: center;
+    } 
+    .sign-span {
+        color: $main_theme;
+        cursor: pointer;
+    }
+}
+.or-container {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+    .or-label {
+        width: 40px;
+        margin: 0 10px 0 10px;
+        color: white;
+    }
+    .or-lineDiv {
+        display: flex;
+        width: 100%;
+        align-items: center;
+    }
+    .or-line {
+        width: 100%;
+        height: 0;
+        border: 1px solid rgba(238, 238, 238, 0.2);;
+    }
+    .or-line:hover {
+        border-color: blue;
+    }
+}
+.logModal-socialButtons {
+    width: 50%;
+    margin: auto;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+

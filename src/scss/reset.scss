@@ -1,0 +1,112 @@
+@import 'root';
+@import 'variables';
+@import 'mixins';
+
+
+.header {
+    background-color: $dark_bg;
+    width: 100%;
+    height: $header_height;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; 
+    .header-img {
+        width: 310px;
+        height: $header_height * 0.75;
+        margin-top: $header_height / 8;
+        float: left;
+    }
+}
+
+
+.reset {
+    @include Modal-content();
+    height: 489px;
+    .reset-close {
+        @include Modal-close();
+    }
+    .reset-close:hover {
+        @include Modal-close-hover();
+    }
+    .reset-logo {
+        @include Modal-logo();
+    }
+    .reset-header {
+        @include Modal-header(26px, 35px, 250px);
+    }
+
+    .reset-form { 
+        .reset-form-item {
+            @include Modal-form-item();
+        }
+        input {
+            @include Modal-form-item-input();
+        }
+        .field {
+            @include Modal-form-field();
+        }
+        .icon {
+            @include Modal-form-item-icon();
+        }
+        .reset-form-password {
+            margin-top: 20px;
+        }
+        .field-container:focus-within {
+            @include changeBorderColor();
+        }
+        .reset-form-submit {
+            @include Modal-form-submit(20px);
+            input {
+                @include Modal-form-submit-button();
+            }
+            .logModal-form-submit-input:enabled:hover {
+                @include changeBgColor();
+            }
+        }
+        .fa {
+            @include changeColor();
+        }
+        .reset-form-error {
+            @include Modal-form-error();
+            font-size: 15px;
+        }
+    }
+
+}
+@media (max-width: 500px) {
+    .reset {
+        width: 100%;
+        .reset-header {
+            font-size: 23px;
+        }
+    }
+}
+
+
+@media (max-width: 500px) {
+    .header {
+        height: auto;
+        justify-content: center;
+        .header-img, .header-button {
+            margin: auto;
+            width: 80%;
+            height: auto;
+        }   
+    }
+    .reset {
+        padding: 0;
+        width: 100%;
+        .reset-form {
+            .reset-form-error {
+                font-size: 13px;   
+            }   
+        }
+        .reset-close {
+            display:block;
+            width: 100%;
+            text-align: center;
+            margin: auto;
+            float: none;
+        }    
+    }
+}

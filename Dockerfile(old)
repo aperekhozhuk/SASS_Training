@@ -1,0 +1,5 @@
+FROM node:latest
+
+COPY . . 
+
+RUN npm install yarn -g && yarn install
